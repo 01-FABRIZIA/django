@@ -8,12 +8,12 @@ def index(request):
     return render(request, 'website/index.html')
 
 def listar_funcionarios(request):
-    funcionarios = Funcionarios.objetos.all()
+    funcionarios = Funcionarios.objects.all()  
     contexto = {"funcionarios": funcionarios}
     return render(request, 'website/funcionarios.html', contexto)
 
 def detalhes_funcionario(request, id):
-    funcionario = get_object_or_404(Funcionarios, pk=id)
+    funcionario = get_object_or_404(Funcionarios, pk=id)  
     contexto = {"funcionario": funcionario}
     return render(request, 'website/detalhesFuncionario.html', contexto)
 
