@@ -8,5 +8,6 @@ urlpatterns = [
     path('funcionario/<int:id>/', views.detalhes_funcionario, name='detalhes'),
     path('editar/<int:id>/', views.editar_funcionario, name='editar'),
     path('excluir/<int:id>/', views.excluir_funcionario, name='excluir'),
+    path('cadastrar/', views.cadastrar_funcionario, name='cadastrar'),
 
 ]
